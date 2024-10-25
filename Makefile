@@ -22,7 +22,7 @@ OBJS = $(CFILES:.c=.o)
 BONUS_OBJS = $(BFILES:.c=.o)
 
 CC = cc 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fPIE
 RM = rm -f
 AR = ar -rc
 NAME = libft.a
