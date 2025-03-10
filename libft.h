@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: rda-cunh <rda-cunh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 17:54:20 by rda-cunh          #+#    #+#             */
-/*   Updated: 2024/05/22 17:34:56 by codespace        ###   ########.fr       */
+/*   Updated: 2025/03/10 19:27:07 by rda-cunh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdio.h>
 # include <fcntl.h>
 # include <stdarg.h>
+# include <limits.h>
 
 //LIBC FUNCTIONS//
 int		ft_isalpha(int c);
@@ -75,6 +76,14 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lsriter(t_list *lst, void (*f)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *));
+
+//ADITIONAL FUNCTIONS//
+void		ft_free_array(char **array);
+void		free_ptr(void **ptr);
+int			ft_isnumber(const char *str);
+void		ft_print_array(char **array);
+long long	ft_safe_atol(const char *str, int *error);
+void		ft_sort_array(char **array, int count);
 
 //PRINTF FUNCTION//
 int		ft_printf(const char *format, ...);
